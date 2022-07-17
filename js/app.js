@@ -1,62 +1,20 @@
-/**
- * 
- * Manipulating the DOM exercise.
- * Exercise programmatically builds navigation,
- * scrolls to anchors from navigation,
- * and highlights section in viewport upon scrolling.
- * 
- * Dependencies: None
- * 
- * JS Version: ES2015/ES6
- * 
- * JS Standard: ESlint
- * 
-*/
+const mainUl = document.querySelector('#navbar__list');
+//first Nav Bar li
+const liNav1 = document.createElement('li');
+mainUl.appendChild(liNav1);
+liNav1.textContent = "Section 1";
 
-/**
- * Comments should be present at the beginning of each procedure and class.
- * Great to have comments before crucial code sections within the procedure.
-*/
+// second Nav Bar li
+const liNav2 = document.createElement('li');
+mainUl.appendChild(liNav2);
+liNav2.textContent = "Section 2";
 
-/**
- * Define Global Variables
- * 
-*/
+// third Nav Bar li
+const liNav3 = document.createElement('li');
+mainUl.appendChild(liNav3);
+liNav3.textContent = "Section 3";
 
-
-/**
- * End Global Variables
- * Start Helper Functions
- * 
-*/
-
-
-
-/**
- * End Helper Functions
- * Begin Main Functions
- * 
-*/
-
-// build the nav
-
-
-// Add class 'active' to section when near top of viewport
-
-
-// Scroll to anchor ID using scrollTO event
-
-
-/**
- * End Main Functions
- * Begin Events
- * 
-*/
-
-// Build menu 
-
-// Scroll to section on link click
-
-// Set sections as active
-
-
+// fourth Nav Bar li
+const liNav4 = document.createElement('li');
+mainUl.appendChild(liNav4);
+liNav4.textContent = "Section 4";
