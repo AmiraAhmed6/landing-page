@@ -1,14 +1,28 @@
 //variables
 const mainUl = document.querySelector('#navbar__list');
 const sections = document.querySelectorAll('section');
+const fragment = document.createDocumentFragment();
+
 // const mediaQuery = window.matchMedia("(max-width:700px)");
 
 // Navbar li
 
-for(let i=0 ; i < sections.length ; i++){
+for(const section of sections){
    const liNav = document.createElement('li');
-    mainUl.appendChild(liNav);
-    liNav.textContent = sections.item(i).getAttribute("data-nav");
+   const link = document.createElement('a');
+   const values = section.getAttribute("data-nav");
+    link.textContent = section.getAttribute("data-nav");
+    link.setAttribute("href",`#${values}`);
+    liNav.appendChild(link);
+    fragment.appendChild(liNav);
+
+    liNav.addEventListener("click", function (e) {
+            e.preventDefault();
+            section.scrollIntoView({
+                behavior : "smooth",
+                 block : "center"
+             })
+    });
 
 }
-
+mainUl.appendChild(fragment);
