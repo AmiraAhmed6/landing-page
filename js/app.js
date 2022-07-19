@@ -2,6 +2,7 @@
 const mainUl = document.querySelector('#navbar__list');
 const sections = document.querySelectorAll('section');
 const fragment = document.createDocumentFragment();
+const mainButton =document.querySelector("#mediaButton");
 
 // const mediaQuery = window.matchMedia("(max-width:700px)");
 
@@ -26,3 +27,8 @@ for(const section of sections){
 
 }
 mainUl.appendChild(fragment);
+
+mainButton.addEventListener("click",function(){
+    mainUl.classList.toggle("hide");
+})
+
