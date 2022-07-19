@@ -27,7 +27,7 @@ for(const section of sections){
 
 }
 mainUl.appendChild(fragment);
-
+//responsive navBar 
 mainButton.addEventListener("click",function(){
     mainUl.classList.toggle("hide");
 })

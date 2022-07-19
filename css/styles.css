@@ -80,7 +80,7 @@ section {
    text-decoration: none;
    color: #fff;
 }
-
+/* responsive navBar style */
 .navbar__menu div.media_button {
     width: 40px;
     height: 40px;
