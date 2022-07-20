@@ -13,6 +13,7 @@ for(const section of sections){
    const link = document.createElement('a');
    const values = section.getAttribute("data-nav");
     link.textContent = section.getAttribute("data-nav");
+    link.classList.add('menu__link');
     link.setAttribute("href",`#${values}`);
     liNav.appendChild(link);
     fragment.appendChild(liNav);
@@ -31,4 +32,17 @@ mainUl.appendChild(fragment);
 mainButton.addEventListener("click",function(){
     mainUl.classList.toggle("hide");
 })
-
+//highlight navbar item and section
+window.addEventListener("scroll",function(){
+    for(const section of sections){
+   const secTop = section.getBoundingClientRect().top;
+   const active = document.getElementById(`${section.id}`);
+   if(secTop >0 && secTop <200){
+    section.classList.add("your-active-class");
+    active.classList.add("active");
+   }else{
+    section.classList.remove('your-active-class');
+    active.classList.remove('active');
+   }
+ }
+});
