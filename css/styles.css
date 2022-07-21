@@ -136,11 +136,6 @@ section {
         display: block;
     }
 }
-.active{
-    color: yellow;
-    background-color: gray;
-}
-
 .navbar__menu .menu__link {
     display: block;
     padding: 1em;
@@ -153,7 +148,10 @@ section {
     color: #fff;
     transition: ease 0.3s all;
 }
-
+.navbar__menu .menu__link .activeItem{
+    background-color: #333;
+    color: yellow;
+}
 /* Header Styles */
 .page__header {
     background-color: #000;

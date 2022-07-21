@@ -4,7 +4,6 @@ const sections = document.querySelectorAll('section');
 const fragment = document.createDocumentFragment();
 const mainButton =document.querySelector("#mediaButton");
 
-// const mediaQuery = window.matchMedia("(max-width:700px)");
 
 // Navbar li
 
@@ -36,13 +35,13 @@ mainButton.addEventListener("click",function(){
 window.addEventListener("scroll",function(){
     for(const section of sections){
    const secTop = section.getBoundingClientRect().top;
-   const active = document.getElementById(`${section.id}`);
+   const active = document.querySelector('.menu__link');
    if(secTop >0 && secTop <200){
     section.classList.add("your-active-class");
-    active.classList.add("active");
+    active.classList.add("activeItem");
    }else{
     section.classList.remove('your-active-class');
-    active.classList.remove('active');
+    active.classList.remove('activeItem');
    }
  }
 });
