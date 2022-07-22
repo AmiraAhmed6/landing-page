@@ -35,7 +35,7 @@ mainButton.addEventListener("click",function(){
 window.addEventListener("scroll",function(){
     for(const section of sections){
    const secTop = section.getBoundingClientRect().top;
-   const active = document.querySelector('.menu__link');
+   const active = document.querySelector(`a[href='#${section.dataset.nav}']`);
    if(secTop >0 && secTop <200){
     section.classList.add("your-active-class");
     active.classList.add("activeItem");
