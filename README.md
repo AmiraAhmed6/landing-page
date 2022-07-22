@@ -1,13 +1,17 @@
 # Landing Page Project
 
-## Table of Contents
+## Description:
 
-* [Instructions](#instructions)
+Responsive Landing Page Project By Udicity.
 
-## Instructions
-
-The starter project has some HTML and CSS styling to display a static version of the Landing Page project. You'll need to convert this project from a static project to an interactive one. This will require modifying the HTML and CSS files, but primarily the JavaScript file.
-
-To get started, open `js/app.js` and start building out the app's functionality
-
-For specific, detailed instructions, look at the project instructions in the Udacity Classroom.
+## Requierments:
+1.Navigation is built dynamically as an unorder List.
+2.It should be clear which section is being viewed while scroling through the page.
+3.When clicking an item from the navigation menu, the link should scroll to the approperiate section.
+## Additional Features:
+1.Responsive navigation menu.
+2.While Scrolling navigation item coresponding to the section in viewport is highlighted 
+## APIS, And Methods Used:
+1.Element.scrollIntoView().
+2.Toggling css classes via `Element.classList.add('className')`,  `Element.classList.remove('className')`, and `Element.classList.toggle('className')`.
+3.`Element.setAttripute('attripute',value)`, and `Element.getAttripute('attripute')`.
