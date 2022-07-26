@@ -33,15 +33,20 @@ mainButton.addEventListener("click",function(){
 })
 //highlight navbar item and section
 window.addEventListener("scroll",function(){
-    for(const section of sections){
-   const secTop = section.getBoundingClientRect().top;
-   const active = document.querySelector(`a[href='#${section.dataset.nav}']`);
-   if(secTop >0 && secTop <200){
-    section.classList.add("your-active-class");
-    active.classList.add("activeItem");
-   }else{
-    section.classList.remove('your-active-class');
-    active.classList.remove('activeItem');
-   }
- }
+
+    const addNavItem = (section) => {
+        const getElemTop = (elem) => elem.getBoundingClientRect().top;
+        const active = document.querySelector(`a[href='#${section.dataset.nav}']`);
+
+        if(getElemTop(section)  >0 && getElemTop(section)  <200){
+         section.classList.add("your-active-class");
+         active.classList.add("activeItem");
+        }else{
+         section.classList.remove('your-active-class');
+         active.classList.remove('activeItem');
+        }
+      }
+
+    sections.forEach((section) => addNavItem(section));
+
 });
