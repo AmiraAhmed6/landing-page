@@ -7,25 +7,29 @@ const mainButton =document.querySelector("#mediaButton");
 
 //Create Navbar li and a
 
-for(const section of sections){
-   const liNav = document.createElement('li');
-   const navLink = document.createElement('a');
-   const values = section.getAttribute("data-nav");
-   navLink.textContent = values;
-    navLink.classList.add('menu__link');
-    navLink.setAttribute("href",`#${values}`);
-    liNav.appendChild(navLink);
-    fragment.appendChild(liNav);
-//Scroll To Target Section
-    liNav.addEventListener("click", function (e) {
-            e.preventDefault();
-            section.scrollIntoView({
-                behavior : "smooth",
-                 block : "center"
-             })
-    });
-
+const creatNav =(section)=>{
+    const liNav = document.createElement('li');
+    const navLink = document.createElement('a');
+    const values = section.getAttribute("data-nav");
+    navLink.textContent = values;
+     navLink.classList.add('menu__link');
+     navLink.setAttribute("href",`#${values}`);
+     liNav.appendChild(navLink);
+     fragment.appendChild(liNav);
+ //Scroll To Target Section
+     liNav.addEventListener("click", function (e) {
+             e.preventDefault();
+             section.scrollIntoView({
+                 behavior : "smooth",
+                  block : "center"
+              })
+     });
 }
+
+
+sections.forEach((section) => creatNav(section));
+
+
 mainUl.appendChild(fragment);
 //responsive navBar 
 mainButton.addEventListener("click",function(){
