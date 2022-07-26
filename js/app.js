@@ -5,7 +5,7 @@ const fragment = document.createDocumentFragment();
 const mainButton =document.querySelector("#mediaButton");
 
 
-// Navbar li
+//Create Navbar li and a
 
 for(const section of sections){
    const liNav = document.createElement('li');
@@ -16,7 +16,7 @@ for(const section of sections){
     navLink.setAttribute("href",`#${values}`);
     liNav.appendChild(navLink);
     fragment.appendChild(liNav);
-//Scroll 
+//Scroll To Target Section
     liNav.addEventListener("click", function (e) {
             e.preventDefault();
             section.scrollIntoView({
