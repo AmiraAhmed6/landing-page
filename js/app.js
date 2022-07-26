@@ -9,14 +9,14 @@ const mainButton =document.querySelector("#mediaButton");
 
 for(const section of sections){
    const liNav = document.createElement('li');
-   const link = document.createElement('a');
+   const navLink = document.createElement('a');
    const values = section.getAttribute("data-nav");
-    link.textContent = section.getAttribute("data-nav");
-    link.classList.add('menu__link');
-    link.setAttribute("href",`#${values}`);
-    liNav.appendChild(link);
+   navLink.textContent = values;
+    navLink.classList.add('menu__link');
+    navLink.setAttribute("href",`#${values}`);
+    liNav.appendChild(navLink);
     fragment.appendChild(liNav);
-
+//Scroll 
     liNav.addEventListener("click", function (e) {
             e.preventDefault();
             section.scrollIntoView({
