@@ -5,18 +5,21 @@ const fragment = document.createDocumentFragment();
 const mainButton =document.querySelector("#mediaButton");
 
 
-//Create Navbar li and a
 
 const creatNav =(section)=>{
+   //Create Navbar li and a
     const liNav = document.createElement('li');
     const navLink = document.createElement('a');
+    //add text and classes to Links
     const values = section.getAttribute("data-nav");
     navLink.textContent = values;
      navLink.classList.add('menu__link');
+     //add attribute href to link
      navLink.setAttribute("href",`#${values}`);
+     //add links to li
      liNav.appendChild(navLink);
      fragment.appendChild(liNav);
- //Scroll To Target Section
+     //Scroll To Target Section
      liNav.addEventListener("click", function (e) {
              e.preventDefault();
              section.scrollIntoView({
